@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<link rel='stylesheet' href='base.css'>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="ctnr calc">
+		<div class="calc-contain">
+			<div class="text">
+				<div class="current"></div>
+			
+				<div class="ans" style="font-size: 75px;">
+					0
+				</div>
+			</div>
+			
+			<div class="inputs">
+				<div class="other" id="clear">AC</div>
+				<div class="other" id="neg-pos">+/-</div>
+				<div class="other" id="percent">&#37</div>
+				<div class="ar" id="divide">/</div>
+				
+				<div class="nums" id="a7">7</div>
+				<div class="nums" id="a8">8</div>
+				<div class="nums" id="a9">9</div>
+				<div class="ar" id="multiply">*</div>
+				
+				<div class="nums" id="a4">4</div>
+				<div class="nums" id="a5">5</div>
+				<div class="nums" id="a6">6</div>
+				<div class="ar" id="subtract">-</div>
+				
+				<div class="nums" id="a1">1</div>
+				<div class="nums" id="a2">2</div>
+				<div class="nums" id="a3">3</div>
+				<div class="ar" id="add">+</div>
+				
+				<div class="nums a0" id="bignum">0</div>
+				<div class="nums" id="dot">.</div>
+				<div class="ar" id="equals">=</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src='script.js'></script>
+<script src='deps/mathjs.js'></script>
+</body>
+</html>

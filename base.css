@@ -1,0 +1,161 @@
+:root {
+	--bg: black;
+	--w: 1284px;
+	--h: 2500px;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--bg);
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+}
+
+.ctnr, .wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calc {
+	--font-sizing: 73px;
+	font-family: system-ui !important;
+	background-color: black;
+	transition: ease-in-out 0.5s;
+	
+	width: calc(var(--w) / 4);
+	height: calc(var(--h) / 4);
+	
+	flex-direction: column;
+	z-index: 5;
+	
+	justify-content: end;
+	padding: 22px;
+	padding-bottom: 40px;
+	
+	border-radius: 50px;
+	user-select:none;
+	-webkit-user-select: none;
+	
+	overflow: hidden;
+	
+}
+
+.calc .text {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+	gap: 1px;
+	
+	width: 95%;
+	
+	color: white;
+	font-weight:305;
+}
+
+.calc .text .current,
+.calc .text .ans {
+	display: inline-block;
+}
+	
+.calc .text .current {
+	font-size: 15px;
+	font-weight: 600;
+	font-family: system-ui;
+
+	word-wrap: anywhere;
+}
+
+.calc .text .ans {
+	font-size: 75px;
+	
+	
+	height: 80px;
+	
+	position: relative;
+	left: 3px;
+	word-wrap: normal;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.calc-contain .inputs {
+	width: 100%;
+	height: 360px;
+	
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 8px;
+	row-gap: 8px;
+	
+	background-color: none;
+}
+
+.calc-contain {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	
+	gap: 12px;
+	
+	align-items: start;
+	
+	margin-bottom: 15px;
+}
+
+.calc-contain .inputs div {
+	display: flex;
+	border-radius: 999px;
+	
+	align-items: center;
+	justify-content: center;
+	
+	width: 63px;
+	height: 63px;
+	
+	font-size: 27px;
+	font-weight: 500;
+	
+}
+
+.calc-contain .inputs div:nth-of-type(17){
+	grid-row-start: 5;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.calc-contain .inputs .other {
+	background-color: rgb(167,167,167);
+}
+
+.calc-contain .inputs .nums,
+.calc-contain .inputs #dot {
+	background-color: rgb(83,83,83, 80%) !important;
+	color: white;
+}
+
+.calc-contain .inputs .ar {
+	background-color: #fea00a;
+	color: white;
+}
+
+.calc-contain .inputs #bignum {
+	width: auto !important;
+	height: auto !important;
+	
+	justify-content: start;
+	padding-left: 21px;
+	
+}
